@@ -1,2 +1,1 @@
-# newcol
-Reversing Sid Meier's Colonization
+# Reversing Sid Meier's Colonization
