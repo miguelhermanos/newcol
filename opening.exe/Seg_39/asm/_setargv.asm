@@ -1,0 +1,243 @@
+                            ;************************************************************************************************
+                            ;*                                           FUNCTION                                           *
+                            ;************************************************************************************************
+                            ;undefined __setargv(undefined2 param_1, undefined2 param_2, undefined2 param_3)
+          ;param_1       undefined2           2                      
+          ;param_2       undefined2           4                      
+          ;param_3       undefined2           6                      
+                                                          ;XREF[1,0]:   1452:01fa
+Seg_39:1452:0fc28f06e643        POP         word ptr [0x43e6]                       
+Seg_39:1452:0fc68f06e843        POP         word ptr [0x43e8]                       
+Seg_39:1452:0fcab430            MOV         AH,0x30                                 
+Seg_39:1452:0fcccd21            INT         0x21                                    
+Seg_39:1452:0fcea3a842          MOV         [0x42a8],AX                             
+Seg_39:1452:0fd1ba0100          MOV         DX,0x1                                  
+Seg_39:1452:0fd43c02            CMP         AL,0x2                                  
+Seg_39:1452:0fd67429            JZ          LAB_1452_1001                           
+Seg_39:1452:0fd88e06a642        MOV         ES,word ptr [0x42a6]                    
+Seg_39:1452:0fdc268e062c00      MOV         ES,word ptr ES:[0x2c]                   
+Seg_39:1452:0fe18c06cb42        MOV         word ptr [0x42cb],ES                    
+Seg_39:1452:0fe533c0            XOR         AX,AX                                   
+Seg_39:1452:0fe799              CWD                                                  
+Seg_39:1452:0fe8b90080          MOV         CX,0x8000                               
+Seg_39:1452:0feb33ff            XOR         DI,DI                                   
+                            LAB_1452_0fed:                ;XREF[1,0]:   1452:0ff0
+Seg_39:1452:0fedf2ae            SCASB.REPNE ES:DI                                   
+Seg_39:1452:0fefae              SCASB       ES:DI                                   
+Seg_39:1452:0ff075fb            JNZ         LAB_1452_0fed                           
+Seg_39:1452:0ff247              INC         DI                                      
+Seg_39:1452:0ff347              INC         DI                                      
+Seg_39:1452:0ff4893ec942        MOV         word ptr [0x42c9],DI                    
+Seg_39:1452:0ff8b9ffff          MOV         CX,0xffff                               
+Seg_39:1452:0ffbf2ae            SCASB.REPNE ES:DI                                   
+Seg_39:1452:0ffdf7d1            NOT         CX                                      
+Seg_39:1452:0fff8bd1            MOV         DX,CX                                   
+                            LAB_1452_1001:                ;XREF[1,0]:   1452:0fd6
+Seg_39:1452:1001bf0100          MOV         DI,0x1                                  
+Seg_39:1452:1004be8100          MOV         SI,0x81                                 
+Seg_39:1452:10078e1ea642        MOV         DS,word ptr [0x42a6]                    
+                            LAB_1452_100b:                ;XREF[4,0]:   1452:100e,1452:1012,1452:1021,1452:1025
+Seg_39:1452:100bac              LODSB       SI                                      
+Seg_39:1452:100c3c20            CMP         AL,0x20                                 
+Seg_39:1452:100e74fb            JZ          LAB_1452_100b                           
+Seg_39:1452:10103c09            CMP         AL,0x9                                  
+Seg_39:1452:101274f7            JZ          LAB_1452_100b                           
+Seg_39:1452:10143c0d            CMP         AL,0xd                                  
+Seg_39:1452:1016746f            JZ          LAB_1452_1087                           
+Seg_39:1452:10180ac0            OR          AL,AL                                   
+Seg_39:1452:101a746b            JZ          LAB_1452_1087                           
+Seg_39:1452:101c47              INC         DI                                      
+                            LAB_1452_101d:                ;XREF[1,0]:   1452:1048
+Seg_39:1452:101d4e              DEC         SI                                      
+                            LAB_1452_101e:                ;XREF[4,0]:   1452:1038,1452:1052,1452:1062,1452:1085
+Seg_39:1452:101eac              LODSB       SI                                      
+Seg_39:1452:101f3c20            CMP         AL,0x20                                 
+Seg_39:1452:102174e8            JZ          LAB_1452_100b                           
+Seg_39:1452:10233c09            CMP         AL,0x9                                  
+Seg_39:1452:102574e4            JZ          LAB_1452_100b                           
+Seg_39:1452:10273c0d            CMP         AL,0xd                                  
+Seg_39:1452:1029745c            JZ          LAB_1452_1087                           
+Seg_39:1452:102b0ac0            OR          AL,AL                                   
+Seg_39:1452:102d7458            JZ          LAB_1452_1087                           
+Seg_39:1452:102f3c22            CMP         AL,0x22                                 
+Seg_39:1452:10317424            JZ          LAB_1452_1057                           
+Seg_39:1452:10333c5c            CMP         AL,0x5c                                 
+Seg_39:1452:10357403            JZ          LAB_1452_103a                           
+Seg_39:1452:103742              INC         DX                                      
+Seg_39:1452:1038ebe4            JMP         LAB_1452_101e                           
+                            LAB_1452_103a:                ;XREF[1,0]:   1452:1035
+Seg_39:1452:103a33c9            XOR         CX,CX                                   
+                            LAB_1452_103c:                ;XREF[1,0]:   1452:1040
+Seg_39:1452:103c41              INC         CX                                      
+Seg_39:1452:103dac              LODSB       SI                                      
+Seg_39:1452:103e3c5c            CMP         AL,0x5c                                 
+Seg_39:1452:104074fa            JZ          LAB_1452_103c                           
+Seg_39:1452:10423c22            CMP         AL,0x22                                 
+Seg_39:1452:10447404            JZ          LAB_1452_104a                           
+Seg_39:1452:104603d1            ADD         DX,CX                                   
+Seg_39:1452:1048ebd3            JMP         LAB_1452_101d                           
+                            LAB_1452_104a:                ;XREF[1,0]:   1452:1044
+Seg_39:1452:104a8bc1            MOV         AX,CX                                   
+Seg_39:1452:104cd1e9            SHR         CX,0x1                                  
+Seg_39:1452:104e13d1            ADC         DX,CX                                   
+Seg_39:1452:1050a801            TEST        AL,0x1                                  
+Seg_39:1452:105275ca            JNZ         LAB_1452_101e                           
+Seg_39:1452:1054eb01            JMP         LAB_1452_1057                           
+                            LAB_1452_1056:                ;XREF[1,0]:   1452:1079
+Seg_39:1452:10564e              DEC         SI                                      
+                            LAB_1452_1057:                ;XREF[4,0]:   1452:1031,1452:1054,1452:1069,1452:1083
+Seg_39:1452:1057ac              LODSB       SI                                      
+Seg_39:1452:10583c0d            CMP         AL,0xd                                  
+Seg_39:1452:105a742b            JZ          LAB_1452_1087                           
+Seg_39:1452:105c0ac0            OR          AL,AL                                   
+Seg_39:1452:105e7427            JZ          LAB_1452_1087                           
+Seg_39:1452:10603c22            CMP         AL,0x22                                 
+Seg_39:1452:106274ba            JZ          LAB_1452_101e                           
+Seg_39:1452:10643c5c            CMP         AL,0x5c                                 
+Seg_39:1452:10667403            JZ          LAB_1452_106b                           
+Seg_39:1452:106842              INC         DX                                      
+Seg_39:1452:1069ebec            JMP         LAB_1452_1057                           
+                            LAB_1452_106b:                ;XREF[1,0]:   1452:1066
+Seg_39:1452:106b33c9            XOR         CX,CX                                   
+                            LAB_1452_106d:                ;XREF[1,0]:   1452:1071
+Seg_39:1452:106d41              INC         CX                                      
+Seg_39:1452:106eac              LODSB       SI                                      
+Seg_39:1452:106f3c5c            CMP         AL,0x5c                                 
+Seg_39:1452:107174fa            JZ          LAB_1452_106d                           
+Seg_39:1452:10733c22            CMP         AL,0x22                                 
+Seg_39:1452:10757404            JZ          LAB_1452_107b                           
+Seg_39:1452:107703d1            ADD         DX,CX                                   
+Seg_39:1452:1079ebdb            JMP         LAB_1452_1056                           
+                            LAB_1452_107b:                ;XREF[1,0]:   1452:1075
+Seg_39:1452:107b8bc1            MOV         AX,CX                                   
+Seg_39:1452:107dd1e9            SHR         CX,0x1                                  
+Seg_39:1452:107f13d1            ADC         DX,CX                                   
+Seg_39:1452:1081a801            TEST        AL,0x1                                  
+Seg_39:1452:108375d2            JNZ         LAB_1452_1057                           
+Seg_39:1452:1085eb97            JMP         LAB_1452_101e                           
+                            LAB_1452_1087:                ;XREF[6,0]:   1452:1016,1452:101a,1452:1029,1452:102d
+                                                          ;             1452:105a,1452:105e
+Seg_39:1452:108716              PUSH        SS                                      
+Seg_39:1452:10881f              POP         DS                                      
+Seg_39:1452:1089893ec342        MOV         word ptr [0x42c3],DI                    
+Seg_39:1452:108d03d7            ADD         DX,DI                                   
+Seg_39:1452:108f47              INC         DI                                      
+Seg_39:1452:1090d1e7            SHL         DI,0x1                                  
+Seg_39:1452:109203d7            ADD         DX,DI                                   
+Seg_39:1452:109442              INC         DX                                      
+Seg_39:1452:109580e2fe          AND         DL,0xfe                                 
+Seg_39:1452:10982be2            SUB         SP,DX                                   
+Seg_39:1452:109a8bc4            MOV         AX,SP                                   
+Seg_39:1452:109ca3c542          MOV         [0x42c5],AX                             
+Seg_39:1452:109f8bd8            MOV         BX,AX                                   
+Seg_39:1452:10a103fb            ADD         DI,BX                                   
+Seg_39:1452:10a316              PUSH        SS                                      
+Seg_39:1452:10a407              POP         ES                                      
+Seg_39:1452:10a536893f          MOV         word ptr SS:[BX],DI                     
+Seg_39:1452:10a843              INC         BX                                      
+Seg_39:1452:10a943              INC         BX                                      
+Seg_39:1452:10aac536c942        LDS         SI,[0x42c9]                             
+                            LAB_1452_10ae:                ;XREF[1,0]:   1452:10b2
+Seg_39:1452:10aeac              LODSB       SI                                      
+Seg_39:1452:10afaa              STOSB       ES:DI                                   
+Seg_39:1452:10b00ac0            OR          AL,AL                                   
+Seg_39:1452:10b275fa            JNZ         LAB_1452_10ae                           
+Seg_39:1452:10b4368e1ea642      MOV         DS,word ptr SS:[0x42a6]                 
+Seg_39:1452:10b9be8100          MOV         SI,0x81                                 
+Seg_39:1452:10bceb03            JMP         LAB_1452_10c1                           
+                            LAB_1452_10be:                ;XREF[2,0]:   1452:10db,1452:10df
+Seg_39:1452:10be33c0            XOR         AX,AX                                   
+Seg_39:1452:10c0aa              STOSB       ES:DI                                   
+                            LAB_1452_10c1:                ;XREF[3,0]:   1452:10bc,1452:10c4,1452:10c8
+Seg_39:1452:10c1ac              LODSB       SI                                      
+Seg_39:1452:10c23c20            CMP         AL,0x20                                 
+Seg_39:1452:10c474fb            JZ          LAB_1452_10c1                           
+Seg_39:1452:10c63c09            CMP         AL,0x9                                  
+Seg_39:1452:10c874f7            JZ          LAB_1452_10c1                           
+Seg_39:1452:10ca3c0d            CMP         AL,0xd                                  
+Seg_39:1452:10cc747c            JZ          LAB_1452_114a                           
+Seg_39:1452:10ce0ac0            OR          AL,AL                                   
+Seg_39:1452:10d07478            JZ          LAB_1452_114a                           
+Seg_39:1452:10d236893f          MOV         word ptr SS:[BX],DI                     
+Seg_39:1452:10d543              INC         BX                                      
+Seg_39:1452:10d643              INC         BX                                      
+                            LAB_1452_10d7:                ;XREF[1,0]:   1452:1104
+Seg_39:1452:10d74e              DEC         SI                                      
+                            LAB_1452_10d8:                ;XREF[4,0]:   1452:10f2,1452:1111,1452:111f,1452:1140
+Seg_39:1452:10d8ac              LODSB       SI                                      
+Seg_39:1452:10d93c20            CMP         AL,0x20                                 
+Seg_39:1452:10db74e1            JZ          LAB_1452_10be                           
+Seg_39:1452:10dd3c09            CMP         AL,0x9                                  
+Seg_39:1452:10df74dd            JZ          LAB_1452_10be                           
+Seg_39:1452:10e13c0d            CMP         AL,0xd                                  
+Seg_39:1452:10e37462            JZ          LAB_1452_1147                           
+Seg_39:1452:10e50ac0            OR          AL,AL                                   
+Seg_39:1452:10e7745e            JZ          LAB_1452_1147                           
+Seg_39:1452:10e93c22            CMP         AL,0x22                                 
+Seg_39:1452:10eb7427            JZ          LAB_1452_1114                           
+Seg_39:1452:10ed3c5c            CMP         AL,0x5c                                 
+Seg_39:1452:10ef7403            JZ          LAB_1452_10f4                           
+Seg_39:1452:10f1aa              STOSB       ES:DI                                   
+Seg_39:1452:10f2ebe4            JMP         LAB_1452_10d8                           
+                            LAB_1452_10f4:                ;XREF[1,0]:   1452:10ef
+Seg_39:1452:10f433c9            XOR         CX,CX                                   
+                            LAB_1452_10f6:                ;XREF[1,0]:   1452:10fa
+Seg_39:1452:10f641              INC         CX                                      
+Seg_39:1452:10f7ac              LODSB       SI                                      
+Seg_39:1452:10f83c5c            CMP         AL,0x5c                                 
+Seg_39:1452:10fa74fa            JZ          LAB_1452_10f6                           
+Seg_39:1452:10fc3c22            CMP         AL,0x22                                 
+Seg_39:1452:10fe7406            JZ          LAB_1452_1106                           
+Seg_39:1452:1100b05c            MOV         AL,0x5c                                 
+Seg_39:1452:1102f3aa            STOSB.REP   ES:DI                                   
+Seg_39:1452:1104ebd1            JMP         LAB_1452_10d7                           
+                            LAB_1452_1106:                ;XREF[1,0]:   1452:10fe
+Seg_39:1452:1106b05c            MOV         AL,0x5c                                 
+Seg_39:1452:1108d1e9            SHR         CX,0x1                                  
+Seg_39:1452:110af3aa            STOSB.REP   ES:DI                                   
+Seg_39:1452:110c7306            JNC         LAB_1452_1114                           
+Seg_39:1452:110eb022            MOV         AL,0x22                                 
+Seg_39:1452:1110aa              STOSB       ES:DI                                   
+Seg_39:1452:1111ebc5            JMP         LAB_1452_10d8                           
+                            LAB_1452_1113:                ;XREF[1,0]:   1452:1138
+Seg_39:1452:11134e              DEC         SI                                      
+                            LAB_1452_1114:                ;XREF[4,0]:   1452:10eb,1452:110c,1452:1126,1452:1145
+Seg_39:1452:1114ac              LODSB       SI                                      
+Seg_39:1452:11153c0d            CMP         AL,0xd                                  
+Seg_39:1452:1117742e            JZ          LAB_1452_1147                           
+Seg_39:1452:11190ac0            OR          AL,AL                                   
+Seg_39:1452:111b742a            JZ          LAB_1452_1147                           
+Seg_39:1452:111d3c22            CMP         AL,0x22                                 
+Seg_39:1452:111f74b7            JZ          LAB_1452_10d8                           
+Seg_39:1452:11213c5c            CMP         AL,0x5c                                 
+Seg_39:1452:11237403            JZ          LAB_1452_1128                           
+Seg_39:1452:1125aa              STOSB       ES:DI                                   
+Seg_39:1452:1126ebec            JMP         LAB_1452_1114                           
+                            LAB_1452_1128:                ;XREF[1,0]:   1452:1123
+Seg_39:1452:112833c9            XOR         CX,CX                                   
+                            LAB_1452_112a:                ;XREF[1,0]:   1452:112e
+Seg_39:1452:112a41              INC         CX                                      
+Seg_39:1452:112bac              LODSB       SI                                      
+Seg_39:1452:112c3c5c            CMP         AL,0x5c                                 
+Seg_39:1452:112e74fa            JZ          LAB_1452_112a                           
+Seg_39:1452:11303c22            CMP         AL,0x22                                 
+Seg_39:1452:11327406            JZ          LAB_1452_113a                           
+Seg_39:1452:1134b05c            MOV         AL,0x5c                                 
+Seg_39:1452:1136f3aa            STOSB.REP   ES:DI                                   
+Seg_39:1452:1138ebd9            JMP         LAB_1452_1113                           
+                            LAB_1452_113a:                ;XREF[1,0]:   1452:1132
+Seg_39:1452:113ab05c            MOV         AL,0x5c                                 
+Seg_39:1452:113cd1e9            SHR         CX,0x1                                  
+Seg_39:1452:113ef3aa            STOSB.REP   ES:DI                                   
+Seg_39:1452:11407396            JNC         LAB_1452_10d8                           
+Seg_39:1452:1142b022            MOV         AL,0x22                                 
+Seg_39:1452:1144aa              STOSB       ES:DI                                   
+Seg_39:1452:1145ebcd            JMP         LAB_1452_1114                           
+                            LAB_1452_1147:                ;XREF[4,0]:   1452:10e3,1452:10e7,1452:1117,1452:111b
+Seg_39:1452:114733c0            XOR         AX,AX                                   
+Seg_39:1452:1149aa              STOSB       ES:DI                                   
+                            LAB_1452_114a:                ;XREF[2,0]:   1452:10cc,1452:10d0
+Seg_39:1452:114a16              PUSH        SS                                      
+Seg_39:1452:114b1f              POP         DS                                      
+Seg_39:1452:114cc7070000        MOV         word ptr [BX],0x0                       
+Seg_39:1452:1150ff2ee643        JMPF        [0x43e6]                                
