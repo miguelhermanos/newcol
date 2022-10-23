@@ -28,8 +28,8 @@ Seg_0:1000:008a e8a1ff          CALL        _apply_fade_out                     
 Seg_0:1000:008d 83c404          ADD         SP,0x4                                  
 Seg_0:1000:0090 eb13            JMP         LAB_1000_00a5                           
                             LAB_1000_0092:                ;XREF[1,0]:   1000:0081
-Seg_0:1000:0092 6800a0          PUSH        -0x6000                                 
-Seg_0:1000:0095 6800fc          PUSH        -0x400                                  
+Seg_0:1000:0092 6800a0          PUSH        -0x6000 0xA000
+Seg_0:1000:0095 6800fc          PUSH        -0x400  0xFC00
 Seg_0:1000:0098 68e84a          PUSH        0x4ae8                                  
 Seg_0:1000:009b 68c247          PUSH        0x47c2                                  
 Seg_0:1000:009e 0e              PUSH        CS                                      

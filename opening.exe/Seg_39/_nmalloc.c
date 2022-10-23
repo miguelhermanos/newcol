@@ -1,0 +1,4 @@
+_nmalloc()
+{
+	__nmalloc();
+}	
